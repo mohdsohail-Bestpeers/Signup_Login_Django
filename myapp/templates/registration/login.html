@@ -1,0 +1,26 @@
+{% load crispy_forms_tags %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>login</title>
+</head>
+<body>
+   
+       <form method="post" class="from-group">
+            {% csrf_token %}
+            {{form|crispy}}
+            {{user}}
+            <p>Don't have an accoount? Create one <a href="/register">here</a></p>
+            <button type="submit" class="btn btn-success">Login</button>	
+        </form>  
+
+
+        <!-- <form method="post">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Username"><label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Password"><input type="submit" name="" value="Login"></form> -->
+
+</body>
+</html>
